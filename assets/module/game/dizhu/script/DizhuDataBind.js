@@ -1,6 +1,6 @@
 var beiMiCommon = require("BeiMiCommon");
 cc.Class({
-    extends: beiMiCommon,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -73,6 +73,7 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+       
         if(this.timer){
             this.timer.active = false ;
         }
@@ -106,22 +107,22 @@ cc.Class({
         }
         this.myselfpool.put(cc.instantiate(this.myself));
 
-        if(this.ready()){
-            if(cc.beimi.user.goldcoins > 9999){
-                var num = cc.beimi.user.goldcoins / 10000  ;
-                this.goldcoins.string = num.toFixed(2) + '万';
-            }else{
-                this.goldcoins.string = cc.beimi.user.goldcoins;
-            }
-            this.cards.string = cc.beimi.user.cards + "张" ;
-        }
-        if(this.myselfpool.size() > 0 && cc.beimi){
-            this.playermysql = this.myselfpool.get();
-            this.playermysql.parent = this.root() ;
-            this.playermysql.setPosition(-520,-180);
-            var render = this.playermysql.getComponent("PlayerRender") ;
-            render.initplayer(cc.beimi.user);
-        }
+        // if(this.ready()){
+        //     if(cc.beimi.user.goldcoins > 9999){
+        //         var num = cc.beimi.user.goldcoins / 10000  ;
+        //         this.goldcoins.string = num.toFixed(2) + '万';
+        //     }else{
+        //         this.goldcoins.string = cc.beimi.user.goldcoins;
+        //     }
+        //     this.cards.string = cc.beimi.user.cards + "张" ;
+        // }
+        // if(this.myselfpool.size() > 0 && cc.beimi){
+        //     this.playermysql = this.myselfpool.get();
+        //     this.playermysql.parent = this.root() ;
+        //     this.playermysql.setPosition(-520,-180);
+        //     var render = this.playermysql.getComponent("PlayerRender") ;
+        //     render.initplayer(cc.beimi.user);
+        // }
     },
     catchtimer:function(times){
 

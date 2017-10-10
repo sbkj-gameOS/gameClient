@@ -1,6 +1,6 @@
 var beiMiCommon = require("BeiMiCommon");
 cc.Class({
-    extends: beiMiCommon,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -37,7 +37,9 @@ cc.Class({
         this.pokercards = new Array();
         this.lastcards = new Array();
         this.lastCardsPanel.active = false ;
-
+        var node = cc.find("Canvas/script/DizhuDataBind") ;
+        this.game = node.getComponent("DizhuDataBind");
+        console.log(this.game);
     },
     begin:function(){
         this.gamebtn.active = false ;
