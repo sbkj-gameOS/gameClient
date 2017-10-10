@@ -24,6 +24,10 @@ cc.Class({
             type: cc.Prefab
         }
     },
+	
+	gameMain:function(){
+		cc.director.loadScene('gameMain');
+	},
 
     // use this for initialization
     onLoad: function () {

@@ -386,8 +386,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 160,
-      "height": 40
+      "width": 532,
+      "height": 86
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -395,8 +395,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -154,
-      "y": 32
+      "x": -160,
+      "y": 25
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -497,7 +497,8 @@
       "__id__": 2
     },
     "_enabled": true,
-    "singleLineText": null
+    "singleLineText": null,
+    "radioButton": []
   },
   {
     "__type__": "cc.Node",
